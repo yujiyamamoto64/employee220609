@@ -7,4 +7,6 @@ import com.yujiyamamoto64.employee220609.model.Employee;
 public interface EmployeeService {
 
 	List<Employee> getAllEmployees();
+	void saveEmployee(Employee employee);
+	
 }

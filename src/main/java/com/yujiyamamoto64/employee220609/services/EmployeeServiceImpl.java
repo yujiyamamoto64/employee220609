@@ -9,14 +9,19 @@ import com.yujiyamamoto64.employee220609.model.Employee;
 import com.yujiyamamoto64.employee220609.repositories.EmployeeRepository;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
 	EmployeeRepository employeeRepository;
-	
+
 	@Override
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
+	}
+
+	@Override
+	public void saveEmployee(Employee employee) {
+		this.employeeRepository.save(employee);
 	}
 
 }
